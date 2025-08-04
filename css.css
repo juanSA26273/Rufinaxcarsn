@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: bisque;
+  background-image: url('img/carsf.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Título */
+.rufi {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 228, 196, 0.7);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rufi h1 {
+  font-size: 35px;
+  color: #333;
+}
+
+/* Contenedor principal */
+.contenido {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* Carrusel */
+.carrusel-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+.carrusel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+  min-width: 100%;
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video */
+.video-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: transparent; 
+  border-radius: 0;              
+  box-shadow: none;             
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+/* Mapa principal */
+.maps {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+/* Mapa flotante */
+.maps2 {
+  position: fixed;    
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Botón flotante */
+.boton-flotante {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #222;
+  color: bisque;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 999;
+}
+
+.boton-flotante:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .carrusel-container,
+  .maps,
+  .video-centro {
+    width: 90%;
+    height: auto;
+  }
+
+  .video-centro video {
+    width: 100%;
+    height: auto;
+  }
+
+  .maps2 {
+    width: 90%;
+    left: 5%;
+    right: auto;
+    top: auto;
+    bottom: 100px;
+  }
+}
+
+
